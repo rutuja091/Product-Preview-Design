@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Design</title>
+    <style>
+        body{
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        #main-product-image{
+            width:300px;
+           height:500px;
+     
+              border:1px solid black;
+              padding:20px;
+             border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+            margin: 30px auto;
+            display: block;
+            background-color: #ffff;
+        }
+        .product-image{
+            height: 80px;
+            width: 50px;
+            border:1px solid black;
+            border-radius: 5px;
+            padding:5px;
+            margin:10px ;
+            cursor: pointer;
+            background-color: #ffff;
+        }
+        .product-images-container{
+          display: flex;
+         
+          justify-content: center;
+        }
+        </style>
+</head>
+<body>
+    <img src="one.jpg" id="main-product-image"/>
+
+    <div class="product-images-container">
+
+        <img src="one.jpg" class="product-image" onclick="changeImage('one.jpg')"/>
+        <img src="two.jpg"class="product-image" onclick="changeImage('two.jpg')"/>
+        <img src="three.jpg" class="product-image" onclick="changeImage('three.jpg')"/>
+        <img src="four.jpg" class="product-image" onclick="changeImage('four.jpg')"/>
+        <img src="five.jpg" class="product-image" onclick="changeImage('five.jpg')"/>
+
+    </div>
+
+    <script>
+
+        function changeImage(imageName){
+         const mainImage= document.getElementById('main-product-image');
+          
+      
+        mainImage.src=imageName;
+    }
+        </script>
+
+</body>
+</html>
